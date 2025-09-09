@@ -9,13 +9,13 @@ const Navbar = () => {
     return (
         <>
             {/* Main Navbar - Always visible at top */}
-            <nav className='bg-white w-[90vw] max-w-6xl mx-auto absolute top-10 left-1/2 transform -translate-x-1/2 rounded-full px-8 py-4 shadow-lg z-50 transition-all duration-300'>
+            <nav className='fixed bg-white w-[90vw] max-w-6xl mx-auto top-10 left-1/2 transform -translate-x-1/2 rounded-full px-8 py-4 shadow-lg z-50 transition-all duration-300'>
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
                         <Image
-                            src="https://cdn.prod.website-files.com/666255f7f2126f4e8cec6f8f/66634daccb34e6d65a41c76d_download.svg"
-                            alt="Linktree Logo"
+                            src="/BitTree.png"
+                            alt="BitTree Logo"
                             className='h-8 w-auto'
                             width={120}
                             height={32}
