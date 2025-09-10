@@ -1,7 +1,9 @@
+"use client"; // Needed because we’ll use a hook
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-
+import { usePathname } from "next/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,18 +15,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "BitTree - Your favorite link sharing site",
-  description: "A platform for sharing your favorite links",
-};
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname(); // get current route
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
+        {/* Render Navbar only if not on /generate */}
+        {pathname !== "/generate" && <Navbar />}
         {children}
       </body>
     </html>

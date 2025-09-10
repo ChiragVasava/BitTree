@@ -18,7 +18,8 @@ export default async function Page({ params }) {
     console.log(item)
 
     return (
-        <div className="flex min-h-screen bg-purple-400 justify-center items-start py-10">
+        <div className="flex min-h-screen bg-purple-400 justify-center items-start py-10 pt-32">
+            {/* 👆 pt-24 pushes content down below Navbar */}
             {item && (
                 <div className="photo flex justify-center flex-col items-center gap-4">
                     <Image
